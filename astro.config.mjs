@@ -5,9 +5,13 @@ import starlight from "@astrojs/starlight";
 export default defineConfig({
     integrations: [
         starlight({
-            title: "Docs",
+            title: "Wiki",
+            logo: {
+                src: "./src/assets/logo.svg",
+                // replacesTitle: true,
+            },
             social: {
-                github: "https://github.com/tyr7z/zombsroyale",
+                // github: "https://github.com/tyr7z/zombsroyale",
             },
             sidebar: [
                 {
