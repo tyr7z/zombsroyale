@@ -1,6 +1,6 @@
 ---
 title: REST API
-description: ZombsRoyale.io's REST API reverse-engineering documentation.
+description: ZombsRoyale Wiki's REST API reverse-engineering documentation.
 ---
 
 ZombsRoyale's API is split into two components that each handle different things. Below is the documentation for the HTTPS/REST part.

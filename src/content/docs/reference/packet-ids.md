@@ -1,6 +1,6 @@
 ---
 title: Packet IDs
-description: ZombsRoyale.io's Packet IDs reverse-engineering documentation.
+description: ZombsRoyale Wiki's Packet IDs reverse-engineering documentation.
 ---
 
 The packet IDs are always the first values ([`Uint8`](https://zombsroyale.wiki/reference/rpc-parameter-types/#uint8-8)) of the packets.

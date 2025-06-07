@@ -1,6 +1,6 @@
 ---
 title: RPC Parameter Types
-description: ZombsRoyale.io's RPC Parameter Types reverse-engineering documentation.
+description: ZombsRoyale Wiki's RPC Parameter Types reverse-engineering documentation.
 ---
 
 The `e_ParameterType` enum represents different types of parameters used in Remote Procedure Calls (RPC). Each parameter type corresponds to a specific data type that can be passed as an argument in RPC communications. Below is the documentation for each parameter type:

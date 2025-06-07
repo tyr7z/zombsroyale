@@ -1,6 +1,6 @@
 ---
-title: Protocol
-description: ZombsRoyale.io's ingame protocol reverse-engineering documentation.
+title: Introduction
+description: ZombsRoyale Wiki's introduction to ingame protocol reverse-engineering documentation.
 ---
 
 When it comes to making bots or a private server for a given game, the first goal we have to keep in mind is to reverse-engineer and understand the protocol completely (or as much as possible). This is the major goal any game modder or hacker needs to achieve to be able to modify the game at will.

@@ -1,6 +1,6 @@
 ---
 title: Launcher
-description: ZombsRoyale.io's launcher reverse-engineering documentation.
+description: ZombsRoyale Wiki's launcher reverse-engineering documentation.
 ---
 
 ## History

@@ -1,6 +1,6 @@
 ---
 title: Entity Attribute Types
-description: ZombsRoyale.io's Entity Attribute Types reverse-engineering documentation.
+description: ZombsRoyale Wiki's Entity Attribute Types reverse-engineering documentation.
 ---
 
 The `e_AttributeType` enum represents different types of attributes that can be associated with entities. These attribute types define the data format for storing various kinds of information related to entities. Below is the documentation for each attribute type:
