@@ -45,7 +45,14 @@ ZombsRoyale's API is split into two components that each handle different things
 |---------|---------------|----------|
 | userKey | account token | yes      |
 
-## **POST** /api/poll/vote/{0}?userKey=*:user-key:*
+<!-- /api/poll/vote/{0}?userKey={1} -->
+## **POST** /api/poll/vote/*:poll-id:*
+**Description:** Votes in a poll.\
+**Query Parameters:**
+|   NAME   |   DESCRIPTION   | REQUIRED |
+|----------|-----------------|----------|
+| userKey  | account token   | yes      |
+| optionId | selected option | yes      |
 
 <!-- /api/profile/{0}?userKey={1} -->
 ## **GET** /api/profile/*:friend-code:*
@@ -202,7 +209,7 @@ ZombsRoyale's API is split into two components that each handle different things
 | csrf | CSRF token  | yes      |
 
 ## **POST** /user/validate/google
-**Description:** Returns the user key of the Google account after successful login. On the web version of the game, the returned HTML sends an `onLoginSuccess` message to the client with the login user data and `csrf` token to origin. On the Windows client it sends a GET request (`http://localhost:7163/?userKey={0}&csrf={1}`) to login with user key through a gateway image in HTML.\
+**Description:** Returns the user key of the Google account after successful login. On the web version of the game, the returned HTML sends an `onLoginSuccess` message to the client with the login user data and `csrf` token to origin. On the Windows client it sends a GET request (`localhost:7163/?userKey={0}&csrf={1}`) to login with user key through a gateway image in HTML.\
 **Query Parameters:**
 |   NAME   | DESCRIPTION | REQUIRED |
 |----------|-------------|----------|
@@ -212,7 +219,7 @@ ZombsRoyale's API is split into two components that each handle different things
 | prompt   | "none"      | yes      |
 
 ## **POST** /user/validate/facebook
-**Description:** Returns the user key of the Facebook account after successful login. On the web version of the game, the returned HTML sends an `onLoginSuccess` message to the client with the login user data and `csrf` token to origin. On the Windows client it sends a GET request (`http://localhost:7163/?userKey={0}&csrf={1}`) to login with user key through a gateway image in HTML.\
+**Description:** Returns the user key of the Facebook account after successful login. On the web version of the game, the returned HTML sends an `onLoginSuccess` message to the client with the login user data and `csrf` token to origin. On the Windows client it sends a GET request (`localhost:7163/?userKey={0}&csrf={1}`) to login with user key through a gateway image in HTML.\
 **Query Parameters:**
 |   NAME   | DESCRIPTION | REQUIRED |
 |----------|-------------|----------|
@@ -233,6 +240,7 @@ ZombsRoyale's API is split into two components that each handle different things
 <!-- /api/validate/discord/{0} -->
 ## **POST** /api/validate/discord/*:authToken:*
 **Description:** Deprecated.\
+**Query Parameters:**
 |   NAME    | DESCRIPTION | REQUIRED |
 |-----------|-------------|----------|
 | authToken | token       | yes      |
@@ -247,6 +255,7 @@ ZombsRoyale's API is split into two components that each handle different things
 <!-- /api/validate/google/{0} -->
 ## **POST** /api/validate/google/*:authCode:*
 **Description:** Deprecated.\
+**Query Parameters:**
 |   NAME   | DESCRIPTION | REQUIRED |
 |----------|-------------|----------|
 | authCode | token       | yes      |
@@ -281,6 +290,7 @@ ZombsRoyale's API is split into two components that each handle different things
 <!-- /api/clan/available?userKey={1} -->
 ## ~~**GET** /api/clan/available~~
 **Description:** Deprecated. Gets available clans. Returns ApiClanAvailableResponse object.\
+**Query Parameters:**
 |  NAME   |  DESCRIPTION  | REQUIRED |
 |---------|---------------|----------|
 | userKey | account token | no       |
@@ -288,6 +298,7 @@ ZombsRoyale's API is split into two components that each handle different things
 <!-- /api/clan/create?userKey={1} -->
 ## ~~**POST** /api/clan/create~~
 **Description:** Deprecated. Creates a clan.\
+**Query Parameters:**
 |    NAME     |   DESCRIPTION    | REQUIRED |
 |-------------|------------------|----------|
 | userKey     | account token    | yes      |
