@@ -21,7 +21,7 @@ There is no easy manner of doing this but some way may end up being easier for y
 
 ## Joining a lobby
 
-The type of packets in charge of joining a lobby are [`PACKET_ENTER_WORLD`](https://zr.tyr7.zip/reference/packet-ids/#packet_enter_world-4).\
+The type of packets in charge of joining a lobby are [`PACKET_ENTER_WORLD`](https://zombsroyale.wiki/reference/packet-ids/#packet_enter_world-4).\
 Below is an outgoing parsed sample of these packets:
 ```json
 // Outgoing PACKET_ENTER_WORLD:
@@ -49,7 +49,7 @@ The protocol version is also called Codec version and the proof of work is by fa
 
 ## RPCs and the EnterWorldResponse
 
-RPC stands for [Remote Procedure Call](https://en.wikipedia.org/wiki/Remote_procedure_call) but basically and for our purposes, RPCs are just a type of packets called [`PACKET_RPC`](https://zr.tyr7.zip/reference/packet-ids/#packet_rpc-9) with id `9` that handle the major part of intercommunication between clients and server on the game, being the ones encrypted and most importantly next to `PACKET_ENTER_WORLD`.
+RPC stands for [Remote Procedure Call](https://en.wikipedia.org/wiki/Remote_procedure_call) but basically and for our purposes, RPCs are just a type of packets called [`PACKET_RPC`](https://zombsroyale.wiki/reference/packet-ids/#packet_rpc-9) with id `9` that handle the major part of intercommunication between clients and server on the game, being the ones encrypted and most importantly next to `PACKET_ENTER_WORLD`.
 Here is a decrypted sample of an RPC:
 ```js
 // Outgoing PACKET_RPC:
@@ -60,7 +60,7 @@ This is the first decryption layer.
 
 #### RPC types
 
-There are also `PACKET_RPC` sub-types identified by the second value on the packets (`42, 0, 0, 0` on our sample) of type [Uint32](https://zr.tyr7.zip/reference/rpc-parameter-types/#uint32-0), which is the reason why it has a padding of zeros.
+There are also `PACKET_RPC` sub-types identified by the second value on the packets (`42, 0, 0, 0` on our sample) of type [Uint32](https://zombsroyale.wiki/reference/rpc-parameter-types/#uint32-0), which is the reason why it has a padding of zeros.
 
 These sub-types are actually called index's and they correspond to RPC internal C# classes that inherit from either `OutRpc` or `InRpc` types of the game depending on whether it is an outgoing or incoming RPC respectively.
 
@@ -70,7 +70,7 @@ The game protocol is obfuscated in a way that both the client and server have so
 
 ### The EnterWorldResponse and internalId's
 
-If you have been following along, you will remember the outgoing [`PACKET_ENTER_WORLD`](https://zr.tyr7.zip/reference/packet-ids/#packet_enter_world-4).
+If you have been following along, you will remember the outgoing [`PACKET_ENTER_WORLD`](https://zombsroyale.wiki/reference/packet-ids/#packet_enter_world-4).
 The EnterWorldResponse is no more than the incoming response packet to our outgoing `PACKET_ENTER_WORLD` sample.
 This is our parsed sample:
 ```js
@@ -122,7 +122,7 @@ This is our parsed sample:
   "udpPort": 9002
 }
 ```
-I have skipped a huge part of it but you can take a look at the whole dump right [here](https://zr.tyr7.zip/enter-world-response-sample.json).
+I have skipped a huge part of it but you can take a look at the whole dump right [here](https://zombsroyale.wiki/enter-world-response-sample.json).
 
 Both the client and the server has a copy of these internalId's and the server specifically chose to use this set of them because it identified the platform of the client by the PoW.
 
@@ -160,4 +160,4 @@ This is the part of `rcps` we are interested in:
 - `unknownBool1` is actually unknown.
 - `parameters` contains the parameter structure of a given RPC.
 
-In our sample, the first parameter is of type [String](https://zr.tyr7.zip/reference/rpc-parameter-types/#string-3) which in this case represents the string "Web" in 4 bytes `3, 87, 101, 98` (the first byte is the string length and the rest are the characters in ASCII). The rest of the bytes of our outgoing RPC sample of type [Uint8](https://zr.tyr7.zip/reference/rpc-parameter-types/#uint8-8) are just to confuse the reverse-engineer but they are still required.
+In our sample, the first parameter is of type [String](https://zombsroyale.wiki/reference/rpc-parameter-types/#string-3) which in this case represents the string "Web" in 4 bytes `3, 87, 101, 98` (the first byte is the string length and the rest are the characters in ASCII). The rest of the bytes of our outgoing RPC sample of type [Uint8](https://zombsroyale.wiki/reference/rpc-parameter-types/#uint8-8) are just to confuse the reverse-engineer but they are still required.
