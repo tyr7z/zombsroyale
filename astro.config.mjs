@@ -31,6 +31,10 @@ export default defineConfig({
                     autogenerate: { directory: "api" },
                 },
                 {
+                    label: "Mason",
+                    autogenerate: { directory: "mason" },
+                },
+                {
                     label: "Resources",
                     autogenerate: { directory: "resources" },
                 },
