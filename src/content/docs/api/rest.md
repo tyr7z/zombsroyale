@@ -209,7 +209,7 @@ ZombsRoyale's API is split into two components that each handle different things
 | csrf | CSRF token  | yes      |
 
 ## **POST** /user/validate/google
-**Description:** Returns the user key of the Google account after successful login. On the web version of the game, the returned HTML sends an `onLoginSuccess` message to the client with the login user data and `csrf` token to origin. On the Windows client it sends a GET request (`localhost:7163/?userKey={0}&csrf={1}`) to login with user key through a gateway image in HTML.\
+**Description:** Returns the user key of the Google account on the ApiUser object after successful login. On the web version of the game, the returned HTML sends an `onLoginSuccess` message to the client with the login user data and `csrf` token to origin. On the Windows client it sends a GET request (`localhost:7163/?userKey={0}&csrf={1}`) to login with user key through a gateway image in HTML.\
 **Query Parameters:**
 |   NAME   | DESCRIPTION | REQUIRED |
 |----------|-------------|----------|
@@ -219,7 +219,7 @@ ZombsRoyale's API is split into two components that each handle different things
 | prompt   | "none"      | yes      |
 
 ## **POST** /user/validate/facebook
-**Description:** Returns the user key of the Facebook account after successful login. On the web version of the game, the returned HTML sends an `onLoginSuccess` message to the client with the login user data and `csrf` token to origin. On the Windows client it sends a GET request (`localhost:7163/?userKey={0}&csrf={1}`) to login with user key through a gateway image in HTML.\
+**Description:** Returns the user key of the Facebook account on the ApiUser object after successful login. On the web version of the game, the returned HTML sends an `onLoginSuccess` message to the client with the login user data and `csrf` token to origin. On the Windows client it sends a GET request (`localhost:7163/?userKey={0}&csrf={1}`) to login with user key through a gateway image in HTML.\
 **Query Parameters:**
 |   NAME   | DESCRIPTION | REQUIRED |
 |----------|-------------|----------|
@@ -231,7 +231,7 @@ ZombsRoyale's API is split into two components that each handle different things
 
 <!-- /api/validate/device/{0} -->
 ## **POST** /api/validate/device/*:deviceId:*
-**Description:** Creates a device account (or signs in) and returns a new user key. Device accounts are only usable from iOS and Android versions of the game.\
+**Description:** Creates a device account (or signs in) and returns a new user key on the ApiUser object. Device accounts are only usable from iOS and Android versions of the game.\
 **Query Parameters:**
 |   NAME   |                  DESCRIPTION                  | REQUIRED |
 |----------|-----------------------------------------------|----------|
@@ -239,7 +239,7 @@ ZombsRoyale's API is split into two components that each handle different things
 
 <!-- /api/validate/discord/{0} -->
 ## **POST** /api/validate/discord/*:authToken:*
-**Description:** Deprecated.\
+**Description:** Takes a Discord Oauth Bearer Authorization Token and returns ApiUser object.\
 **Query Parameters:**
 |   NAME    | DESCRIPTION | REQUIRED |
 |-----------|-------------|----------|
