@@ -66,3 +66,4 @@ Mason is a [Socket.IO](https://socket.io/) based connection through WebSockets o
 #### `partyAutofillUpdated`
 #### `friendRequestReceived`
 #### `partyRegionUpdated`
+

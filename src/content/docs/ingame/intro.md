@@ -65,14 +65,14 @@ There are also `PACKET_RPC` sub-types (such as "SetPlatformRpc") identified by t
 
 These sub-types are actually called *indexes* and they correspond to RPC internal C# classes that inherit from either `OutRpc` or `InRpc` types of the game, depending on whether it is an outgoing or incoming RPC.
 
-The game protocol is obfuscated in a way that both the client and server have so called `internalId`s that are matched to random index's when a client joins a lobby.\
+The game protocol is obfuscated in a way that both the client and server have so called `internalId`s that are matched to random indexes when a client joins a lobby.\
 I know this may seem confusing at first but **here is where the EnterWorldResponse comes into play.**
 
 ### The EnterWorldResponse and internalId's
 
 If you have been following along, you will remember the outgoing [`PACKET_ENTER_WORLD`](https://zombsroyale.wiki/reference/packet-ids/#packet_enter_world-4).
-The EnterWorldResponse is no more than the server-to-client packet to response to our client-to-server (outgoing) `PACKET_ENTER_WORLD` sample.
-This is our parsed EnterWorldResponse sample:
+The EnterWorldResponse is no more than the server-to-client packet in response to our outgoing `PACKET_ENTER_WORLD` (client-to-server) sample.
+Here is our parsed EnterWorldResponse sample:
 ```js
 // Incoming PACKET_ENTER_WORLD:
 {
@@ -125,6 +125,8 @@ This is our parsed EnterWorldResponse sample:
 I have skipped a huge part of it for readability but you can take a look at the whole dump [here](https://zombsroyale.wiki/enter-world-response-sample.json).
 
 Both the client and server have a copy of these internalId's. The server is choosing to use this set of them because it identifies the platform of the client as "Web" with the Proof of Work. This is possible because the PoW is calculated differently for each platform.
+Each platform has their own set of internalId's for each Codec version (18 in this case) that both client and server must share to intercommunicate, in relation to the Proof of Work.
+The `proofOfWork`s must different per connection because they rely on the ingame server's endpoint (randomized on the server-side each time).
 
 Here is our "SetPlatform" RPC sample again:
 ```js
@@ -163,5 +165,6 @@ In this object:
 
 In our "SetPlatformRpc" sample, the first parameter is of type [String](https://zombsroyale.wiki/reference/rpc-parameter-types/#string-3) which in this case represents the string "Web" in 4 bytes `3, 87, 101, 98`, where the first byte is the string length and the rest are the "Web" characters in ASCII. The rest of the bytes of our outgoing RPC sample are of type [Uint8](https://zombsroyale.wiki/reference/rpc-parameter-types/#uint8-8) and are there just to confuse the reverse-engineer by randomizing the RPC structures on each lobby.
 
-If we ignore the dummy type 8 (Uint8) randomized parameters on this packet we are left with just the string "Web". So we now know the "SetPlatformRpc" sends a platform string that can be "Web", "Windows", "Android" or "iOS".
+If we ignore the dummy type `8` (Uint8) randomized parameters on this packet we are left with just the string "Web". So we now know the "SetPlatformRpc" sends a platform string that can be "Web", "Windows", "Android" or "iOS".
 The SetPlatformRpc is special because the server wont show the client ingame until it receives it, which makes it essential for bots to send it.
+
