@@ -5,6 +5,29 @@ description: ZombsRoyale Wiki's Entity Attribute Types reverse-engineering docum
 
 The `e_AttributeType` enum represents different types of attributes that can be associated with entities. These attribute types define the data format for storing various kinds of information related to entities. Below is the documentation for each attribute type:
 
+```c#
+public enum e_AttributeType
+{
+    Uninitialized, // 0x00 (0)
+    Uint32,        // 0x01 (1)
+    Int32,         // 0x02 (2)
+    Float,         // 0x03 (3)
+    String,        // 0x04 (4)
+    Vector2,       // 0x05 (5)
+    EntityType,    // 0x06 (6)
+    ArrayVector2,  // 0x07 (7)
+    ArrayUint32,   // 0x08 (8)
+    Uint16,        // 0x09 (9)
+    Uint8,         // 0x0A (10)
+    Int16,         // 0x0B (11)
+    Int8,          // 0x0C (12)
+    Uint64,        // 0x0D (13)
+    Int64,         // 0x0E (14)
+    Double,        // 0x0F (15)
+    ArrayInt32,    // 0x10 (16)
+    ArrayUint8     // 0x11 (17)
+}```
+
 ## Uninitialized (0)
 - **Value:** 0 (0x00)
 - **Description:** Represents an uninitialized or undefined attribute type.
@@ -80,4 +103,3 @@ The `e_AttributeType` enum represents different types of attributes that can be 
 ---
 
 *Note: This documentation provides a brief description of each attribute type and its associated value.*
-

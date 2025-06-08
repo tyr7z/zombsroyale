@@ -9,61 +9,62 @@ ZombsRoyale's API is split into two components that each handle different things
 
 Mason is the API part of ZombsRoyale in charge of handling friends, parties and lobby joining. A important detail about Mason is that it acts as a dispenser of ingame server connection data for clients to join matches.
 
+![](../../../assets/who_is_mason.png)
+
 Mason is a [Socket.IO](https://socket.io/) based connection through WebSockets on top of TCP, so its API is adapted to these events.
 
 ## The events:
 
 ### **Client to server:**
 
-#### `login`
-#### `logout`
-#### `refresh`
-#### `setPlatform`
-#### `setVersion`
-#### `setName`
-#### `setStatus`
-#### `createParty`
-#### `joinParty`
-#### `leaveParty`
-#### `setReady`
-#### `setPartyVersion`
-#### `setPartyRegion`
-#### `setPartyGameMode`
-#### `setPartyAutoFill`
-#### `setPartyTournamentCode`
-#### `setIsInRound`
-#### `restartPartyMatchmaking`
-#### `sendPartyInvite`
-#### `sendFriendRequest`
-#### `acceptFriendRequest`
-#### `rejectFriendRequest`
-#### `deleteFriend`
-#### `sendPrivateMessage`
-#### `sendClanMessage`
+- #### `login`
+- #### `logout`
+- #### `refresh`
+- #### `setPlatform`
+- #### `setVersion`
+- #### `setName`
+- #### `setStatus`
+- #### `createParty`
+- #### `joinParty`
+- #### `leaveParty`
+- #### `setReady`
+- #### `setPartyVersion`
+- #### `setPartyRegion`
+- #### `setPartyGameMode`
+- #### `setPartyAutoFill`
+- #### `setPartyTournamentCode`
+- #### `setIsInRound`
+- #### `restartPartyMatchmaking`
+- #### `sendPartyInvite`
+- #### `sendFriendRequest`
+- #### `acceptFriendRequest`
+- #### `rejectFriendRequest`
+- #### `deleteFriend`
+- #### `sendPrivateMessage`
+- #### `sendClanMessage`
 
 ### **Server to client:**
 
-#### `clansData`
-#### `partyInviteReceived`
-#### `partyData`
-#### `friendsData`
-#### `partyStateUpdated`
-#### `partyLeft`
-#### `partyPlayerJoined`
-#### `partyVersionUpdated`
-#### `partyMetadataUpdated`
-#### `partyGameModeUpdated`
-#### `privateMessageReceived`
-#### `friendUpdated`
-#### `partyJoinServer`
-#### `friendRequestRejected`
-#### `partyPlayerUpdated`
-#### `friendDeleted`
-#### `friendRequests`
-#### `partyPlayerLeft`
-#### `clanMessageReceived`
-#### `loggedIn`
-#### `partyAutofillUpdated`
-#### `friendRequestReceived`
-#### `partyRegionUpdated`
-
+- #### `clansData`
+- #### `partyInviteReceived`
+- #### `partyData`
+- #### `friendsData`
+- #### `partyStateUpdated`
+- #### `partyLeft`
+- #### `partyPlayerJoined`
+- #### `partyVersionUpdated`
+- #### `partyMetadataUpdated`
+- #### `partyGameModeUpdated`
+- #### `privateMessageReceived`
+- #### `friendUpdated`
+- #### `partyJoinServer`
+- #### `friendRequestRejected`
+- #### `partyPlayerUpdated`
+- #### `friendDeleted`
+- #### `friendRequests`
+- #### `partyPlayerLeft`
+- #### `clanMessageReceived`
+- #### `loggedIn`
+- #### `partyAutofillUpdated`
+- #### `friendRequestReceived`
+- #### `partyRegionUpdated`

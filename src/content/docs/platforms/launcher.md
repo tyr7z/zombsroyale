@@ -26,7 +26,7 @@ It is an OpenGL C++ program.
 | id   | manifest id | yes      |
 
 ##### **GET** /asset/content/*:sha1-hash:*
-**Description:** When the launcher downloads a file with this endpoint, it comes encrypted, so it has to decrypt it with a XOR key (it is the same for every file and every game version). Hint: 0 ^ key = key.
+**Description:** When the launcher downloads a file with this endpoint, it comes encrypted, so it has to decrypt it with a XOR key (it is the same for every file and every game version).
 
 ## Finding the launcher's XOR key
 

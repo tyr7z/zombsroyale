@@ -3,7 +3,25 @@ title: RPC Parameter Types
 description: ZombsRoyale Wiki's RPC Parameter Types reverse-engineering documentation.
 ---
 
-The `e_ParameterType` enum represents different types of parameters used in Remote Procedure Calls (RPC). Each parameter type corresponds to a specific data type that can be passed as an argument in RPC communications. Below is the documentation for each parameter type:
+The `e_ParameterType` enum is used within the `RpcParameter` class and determines the given parameter's data type.
+
+```c#
+enum e_ParameterType
+{
+    Uint32,           // 0x00 (0)
+    Int32,            // 0x01 (1)
+    Float,            // 0x02 (2)
+    String,           // 0x03 (3)
+    Uint64,           // 0x04 (4)
+    Int64,            // 0x05 (5)
+    Uint16,           // 0x06 (6)
+    Int16,            // 0x07 (7)
+    Uint8,            // 0x08 (8)
+    Int8,             // 0x09 (9)
+    VectorUint8,      // 0x0A (10)
+    CompressedString  // 0x0B (11)
+}
+```
 
 ## Uint32 (0)
 - **Value:** 0 (0x00)
@@ -56,4 +74,3 @@ The `e_ParameterType` enum represents different types of parameters used in Remo
 ---
 
 *Note: This documentation provides a brief description of each parameter type and its associated value.*
-

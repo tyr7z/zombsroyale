@@ -332,4 +332,3 @@ ZombsRoyale's API is split into two components that each handle different things
 |  NAME   |  DESCRIPTION  | REQUIRED |
 |---------|---------------|----------|
 | userKey | account token | yes      |
-

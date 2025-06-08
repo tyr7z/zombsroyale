@@ -7,6 +7,28 @@ The packet IDs are usually the first values ([`Uint8`](https://zombsroyale.wiki/
 
 The `e_PacketId` enum represents different packet identifiers used in the Zombs Royale server protocol. Each packet ID corresponds to a specific type of communication or data exchange between the client and the server. Below is the documentation for each packet ID:
 
+```c#
+public enum e_PacketId
+{
+    PACKET_ENTITY_UPDATE,                 // 0x00 (0)
+    PACKET_PLAYER_COUNTER_UPDATE,         // 0x01 (1)
+    PACKET_SET_WORLD_DIMENSIONS,          // 0x02 (2)
+    PACKET_INPUT,                         // 0x03 (3)
+    PACKET_ENTER_WORLD,                   // 0x04 (4)
+    PACKET_PING = 7,                      // 0x05 (5)
+    PACKET_RPC = 9,                       // 0x06 (6)
+    PACKET_UDP_CONNECT,                   // 0x07 (7)
+    PACKET_UDP_TICK,                      // 0x08 (8)
+    PACKET_UDP_ACK_TICK,                  // 0x09 (9)
+    PACKET_UDP_PONG,                      // 0x0A (10)
+    PACKET_UDP_TICK_WITH_COMPRESSED_UIDS, // 0x0B (11)
+    PACKET_UDP_FRAGMENT,                  // 0x0C (12)
+    PACKET_UDP_CONNECT_1300,              // 0x0D (13)
+    PACKET_UDP_CONNECT_500,               // 0x0E (14)
+    PACKET_UDP_RPC = -1                   // 0xFFFFFFFF (-1)
+}
+```
+
 ## PACKET_ENTITY_UPDATE (0)
 - **Value:** 0 (0x00)
 - **Description:** Represents a packet for updating entity information.
@@ -74,4 +96,3 @@ The `e_PacketId` enum represents different packet identifiers used in the Zombs 
 ---
 
 *Note: This documentation provides a brief description of each packet ID and its associated value.*
-
