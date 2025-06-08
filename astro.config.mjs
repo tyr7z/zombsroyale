@@ -39,6 +39,10 @@ export default defineConfig({
                     autogenerate: { directory: "mason" },
                 },
                 {
+                    label: "Exploits",
+                    autogenerate: { directory: "exploits" },
+                },
+                {
                     label: "Resources",
                     autogenerate: { directory: "resources" },
                 },
