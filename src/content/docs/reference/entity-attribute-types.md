@@ -26,7 +26,8 @@ public enum e_AttributeType
     Double,        // 0x0F (15)
     ArrayInt32,    // 0x10 (16)
     ArrayUint8     // 0x11 (17)
-}```
+}
+```
 
 ## Uninitialized (0)
 - **Value:** 0 (0x00)
