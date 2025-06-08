@@ -28,9 +28,9 @@ It is an OpenGL C++ program.
 ##### **GET** /asset/content/*:sha1-hash:*
 **Description:** When the launcher downloads a file with this endpoint, it comes encrypted, so it has to decrypt it with a XOR key (it is the same for every file and every game version). Hint: 0 ^ key = key.
 
-## Approaches for getting its XOR key
+## Finding the launcher's XOR key
 
-### a) Calculating it
+### Option A: Calculating it
 
 **Description:** You can calculate XOR keys when you have the encrypted and decrypted data (encrypted ^ decrypted = key). Here is a proof of concept written in Python.
 ```py
@@ -47,7 +47,7 @@ with open("keystream.bin", "wb") as f:
     f.close()
 ```
 
-### b) Looking for patterns
+### Option B: Looking for patterns
 
 **Description:** You could also look for patterns in a encrypted file sample. The key will be stored as plaintext if there are enough null bytes because of the following simple XOR rule.
 ```

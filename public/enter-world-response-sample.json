@@ -1055,7 +1055,7 @@
     {
       "index": 0,
       "internalId": 2709538405,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 1082326051,
@@ -1127,7 +1127,7 @@
     {
       "index": 1,
       "internalId": 578707005,
-      "unknownBool1": true,
+      "isArray": true,
       "parameters": [
         {
           "id": 2617423456,
@@ -1149,7 +1149,7 @@
     {
       "index": 2,
       "internalId": 162743138,
-      "unknownBool1": true,
+      "isArray": true,
       "parameters": [
         {
           "id": 1499004976,
@@ -1171,7 +1171,7 @@
     {
       "index": 3,
       "internalId": 2777370850,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 72573088,
@@ -1213,7 +1213,7 @@
     {
       "index": 4,
       "internalId": 2094572163,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 133625430,
@@ -1265,7 +1265,7 @@
     {
       "index": 5,
       "internalId": 1031814391,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3367482453,
@@ -1312,7 +1312,7 @@
     {
       "index": 6,
       "internalId": 2794351219,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3477657744,
@@ -1344,7 +1344,7 @@
     {
       "index": 7,
       "internalId": 3620373823,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 1500857783,
@@ -1401,7 +1401,7 @@
     {
       "index": 8,
       "internalId": 718493608,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 2614126880,
@@ -1463,7 +1463,7 @@
     {
       "index": 9,
       "internalId": 1516009858,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 708097425,
@@ -1520,7 +1520,7 @@
     {
       "index": 10,
       "internalId": 23290714,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 1896153629,
@@ -1562,7 +1562,7 @@
     {
       "index": 11,
       "internalId": 3541356542,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 4113839020,
@@ -1594,7 +1594,7 @@
     {
       "index": 12,
       "internalId": 2661325286,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3088003460,
@@ -1626,7 +1626,7 @@
     {
       "index": 13,
       "internalId": 1466143289,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 149094281,
@@ -1653,7 +1653,7 @@
     {
       "index": 14,
       "internalId": 889229491,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 2370211068,
@@ -1710,7 +1710,7 @@
     {
       "index": 15,
       "internalId": 449690485,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 1275721750,
@@ -1757,7 +1757,7 @@
     {
       "index": 16,
       "internalId": 3987441975,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3373362209,
@@ -1809,7 +1809,7 @@
     {
       "index": 17,
       "internalId": 225738686,
-      "unknownBool1": true,
+      "isArray": true,
       "parameters": [
         {
           "id": 174341467,
@@ -1836,7 +1836,7 @@
     {
       "index": 18,
       "internalId": 2027841182,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 4229635668,
@@ -1878,7 +1878,7 @@
     {
       "index": 19,
       "internalId": 2293186499,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 1877350155,
@@ -1910,7 +1910,7 @@
     {
       "index": 20,
       "internalId": 3994054076,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 2762886898,
@@ -1972,7 +1972,7 @@
     {
       "index": 21,
       "internalId": 425905265,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3635198360,
@@ -2034,7 +2034,7 @@
     {
       "index": 22,
       "internalId": 1369622158,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 2194043019,
@@ -2066,7 +2066,7 @@
     {
       "index": 23,
       "internalId": 1898022050,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 123654235,
@@ -2113,7 +2113,7 @@
     {
       "index": 24,
       "internalId": 2937491354,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 841854232,
@@ -2170,7 +2170,7 @@
     {
       "index": 25,
       "internalId": 734711125,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 2079807474,
@@ -2227,7 +2227,7 @@
     {
       "index": 26,
       "internalId": 3628270750,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3647649189,
@@ -2279,7 +2279,7 @@
     {
       "index": 27,
       "internalId": 612719106,
-      "unknownBool1": true,
+      "isArray": true,
       "parameters": [
         {
           "id": 4535140,
@@ -2311,7 +2311,7 @@
     {
       "index": 28,
       "internalId": 3098030756,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 569684249,
@@ -2343,7 +2343,7 @@
     {
       "index": 29,
       "internalId": 417959832,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 613355863,
@@ -2385,7 +2385,7 @@
     {
       "index": 30,
       "internalId": 2302724451,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3824457841,
@@ -2452,7 +2452,7 @@
     {
       "index": 31,
       "internalId": 2786200249,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3728145156,
@@ -2529,7 +2529,7 @@
     {
       "index": 32,
       "internalId": 1080543963,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3309902312,
@@ -2581,7 +2581,7 @@
     {
       "index": 33,
       "internalId": 503833958,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 575315376,
@@ -2618,7 +2618,7 @@
     {
       "index": 34,
       "internalId": 1829667351,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3460804750,
@@ -2670,7 +2670,7 @@
     {
       "index": 35,
       "internalId": 1401061906,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 78977655,
@@ -2712,7 +2712,7 @@
     {
       "index": 36,
       "internalId": 1919892254,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 589830587,
@@ -2769,7 +2769,7 @@
     {
       "index": 37,
       "internalId": 1676395664,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 199189388,
@@ -2891,7 +2891,7 @@
     {
       "index": 38,
       "internalId": 3685701786,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3631908025,
@@ -2948,7 +2948,7 @@
     {
       "index": 39,
       "internalId": 4001524947,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3526980726,
@@ -2990,7 +2990,7 @@
     {
       "index": 40,
       "internalId": 1390357347,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 2349204086,
@@ -3052,7 +3052,7 @@
     {
       "index": 41,
       "internalId": 1629461175,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 2744229170,
@@ -3154,7 +3154,7 @@
     {
       "index": 42,
       "internalId": 942553282,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 1581339859,
@@ -3196,7 +3196,7 @@
     {
       "index": 43,
       "internalId": 1723687806,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 1205301067,
@@ -3238,7 +3238,7 @@
     {
       "index": 44,
       "internalId": 3464845515,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3098195263,
@@ -3290,7 +3290,7 @@
     {
       "index": 45,
       "internalId": 443168427,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 2080850205,
@@ -3342,7 +3342,7 @@
     {
       "index": 46,
       "internalId": 3107655145,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 4294364909,
@@ -3404,7 +3404,7 @@
     {
       "index": 47,
       "internalId": 1109238795,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 745582990,
@@ -3466,7 +3466,7 @@
     {
       "index": 48,
       "internalId": 854541913,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3278302290,
@@ -3513,7 +3513,7 @@
     {
       "index": 49,
       "internalId": 1115988035,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3089515100,
@@ -3590,7 +3590,7 @@
     {
       "index": 50,
       "internalId": 2935692911,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3825791870,
@@ -3797,7 +3797,7 @@
     {
       "index": 51,
       "internalId": 1094675922,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 1143213362,
@@ -3854,7 +3854,7 @@
     {
       "index": 52,
       "internalId": 3789918467,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 2030067078,
@@ -3891,7 +3891,7 @@
     {
       "index": 53,
       "internalId": 1631318713,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3492285685,
@@ -3943,7 +3943,7 @@
     {
       "index": 54,
       "internalId": 3194882198,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 400352956,
@@ -3995,7 +3995,7 @@
     {
       "index": 55,
       "internalId": 2068578752,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 4210910353,
@@ -4052,7 +4052,7 @@
     {
       "index": 56,
       "internalId": 3636927840,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 241320919,
@@ -4089,7 +4089,7 @@
     {
       "index": 57,
       "internalId": 1300570695,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 1172812724,
@@ -4156,7 +4156,7 @@
     {
       "index": 58,
       "internalId": 414373855,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3588720578,
@@ -4183,7 +4183,7 @@
     {
       "index": 59,
       "internalId": 2924541214,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 336449137,
@@ -4205,7 +4205,7 @@
     {
       "index": 60,
       "internalId": 1626091625,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 288084982,
@@ -4272,7 +4272,7 @@
     {
       "index": 61,
       "internalId": 1849135544,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3066414487,
@@ -4329,7 +4329,7 @@
     {
       "index": 62,
       "internalId": 1817991151,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3010607668,
@@ -4381,7 +4381,7 @@
     {
       "index": 63,
       "internalId": 3105356014,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 2936451265,
@@ -4408,7 +4408,7 @@
     {
       "index": 64,
       "internalId": 580906184,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3130860086,
@@ -4475,7 +4475,7 @@
     {
       "index": 65,
       "internalId": 3580257044,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3969691050,
@@ -4537,7 +4537,7 @@
     {
       "index": 66,
       "internalId": 2851389072,
-      "unknownBool1": true,
+      "isArray": true,
       "parameters": [
         {
           "id": 3945980530,
@@ -4589,7 +4589,7 @@
     {
       "index": 67,
       "internalId": 3619103978,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3318897796,
@@ -4666,7 +4666,7 @@
     {
       "index": 68,
       "internalId": 1984962589,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 346401256,
@@ -4713,7 +4713,7 @@
     {
       "index": 69,
       "internalId": 3976045153,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3578232404,
@@ -4765,7 +4765,7 @@
     {
       "index": 70,
       "internalId": 1813816057,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3674991171,
@@ -4832,7 +4832,7 @@
     {
       "index": 71,
       "internalId": 1019695232,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 1252696696,
@@ -4899,7 +4899,7 @@
     {
       "index": 72,
       "internalId": 1743978842,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 2092251680,
@@ -4961,7 +4961,7 @@
     {
       "index": 73,
       "internalId": 1661215663,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 483716142,
@@ -5003,7 +5003,7 @@
     {
       "index": 74,
       "internalId": 1535217798,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 1480383361,
@@ -5060,7 +5060,7 @@
     {
       "index": 75,
       "internalId": 2363057313,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 1116431554,
@@ -5117,7 +5117,7 @@
     {
       "index": 76,
       "internalId": 2902972460,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3132325553,
@@ -5144,7 +5144,7 @@
     {
       "index": 77,
       "internalId": 3007058966,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 4089513081,
@@ -5171,7 +5171,7 @@
     {
       "index": 78,
       "internalId": 653630397,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3124087745,
@@ -5258,7 +5258,7 @@
     {
       "index": 79,
       "internalId": 157289262,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 1115603748,
@@ -5310,7 +5310,7 @@
     {
       "index": 80,
       "internalId": 754590302,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 2009814997,
@@ -5367,7 +5367,7 @@
     {
       "index": 81,
       "internalId": 1204887873,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 1064040267,
@@ -5399,7 +5399,7 @@
     {
       "index": 82,
       "internalId": 296171362,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3224798318,
@@ -5446,7 +5446,7 @@
     {
       "index": 83,
       "internalId": 1884290435,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 476961260,
@@ -5493,7 +5493,7 @@
     {
       "index": 84,
       "internalId": 2242234153,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 2075928059,
@@ -5550,7 +5550,7 @@
     {
       "index": 85,
       "internalId": 2484857107,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 1348768813,
@@ -5592,7 +5592,7 @@
     {
       "index": 86,
       "internalId": 721856764,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 166947593,
@@ -5624,7 +5624,7 @@
     {
       "index": 87,
       "internalId": 2296225100,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 2005301395,
@@ -5646,7 +5646,7 @@
     {
       "index": 88,
       "internalId": 4145003078,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3301309165,
@@ -5703,7 +5703,7 @@
     {
       "index": 89,
       "internalId": 570700652,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 1341565740,
@@ -5745,7 +5745,7 @@
     {
       "index": 90,
       "internalId": 2882633476,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 2455103369,
@@ -5792,7 +5792,7 @@
     {
       "index": 91,
       "internalId": 1527969079,
-      "unknownBool1": false,
+      "isArray": false,
       "parameters": [
         {
           "id": 3039745391,
