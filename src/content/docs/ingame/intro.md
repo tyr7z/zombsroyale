@@ -167,3 +167,4 @@ In our "SetPlatformRpc" sample, the first parameter is of type [String](https://
 
 If we ignore the dummy type `8` (Uint8) randomized parameters on this packet we are left with just the string "Web". So we now know the "SetPlatformRpc" sends a platform string that can be "Web", "Windows", "Android" or "iOS".
 The SetPlatformRpc is special because the server wont show the client ingame until it receives it, which makes it essential for bots to send it.
+
