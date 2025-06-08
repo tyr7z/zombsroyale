@@ -12,7 +12,7 @@ ZombsRoyale's API is split into two components that each handle different things
 **Description:** Does nothing at all.
 
 ## **GET** /user/logout
-**Description:** Does nothing at all.
+**Description:** Logs out on the Web client by returning HTML code that deletes the `userKey` cookie client-side.
 
 <!-- /api/config?platform={0}&version={1}&userKey={2}&isPolledUpdate={3} -->
 ## **GET** /api/config
@@ -248,6 +248,7 @@ ZombsRoyale's API is split into two components that each handle different things
 <!-- /api/validate/facebook/{0} -->
 ## **POST** /api/validate/facebook/*:accessToken:*
 **Description:** Deprecated.\
+**Query Parameters:**
 |    NAME     | DESCRIPTION | REQUIRED |
 |-------------|-------------|----------|
 | accessToken | token       | yes      |
