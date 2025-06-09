@@ -8,6 +8,8 @@ description: ZombsRoyale Wiki's launcher reverse-engineering documentation.
 ZombsRoyale is a game whose PC client version used to be installed officially through Discord Game Library from [here](https://discord.com/store/skus/519338998791929866/zombsroyale-io) (link is down).
 Users would be able to add the game to their Discord accounts freely for future installation.
 
+![](../../../assets/nitro_game_library.png)
+
 Unluckily for the game developers, Discord announced the closure of their Nitro Game Library for lack of use of their users at the end of 2019, forcing ZombsRoyale to switch to a different game distribution service.
 The prices and percentages of what the available services take made the developers make the decision to create their own form of distribution of their game's client.
 
