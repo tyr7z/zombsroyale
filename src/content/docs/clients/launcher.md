@@ -21,11 +21,7 @@ It is an OpenGL C++ program.
 ### The endpoints:
 
 ##### **GET** /asset/manifest/*:id:*
-**Description:** Returns a manifest JSON by its id number. The id can set to "current" for the endpoint to return the current latest manifest version JSON.\
-**Query Parameters:**
-| NAME | DESCRIPTION | REQUIRED |
-|------|-------------|----------|
-| id   | manifest id | yes      |
+**Description:** Returns a manifest JSON by its id number. The id can set to "current" for the endpoint to return the current latest manifest version JSON.
 
 ##### **GET** /asset/content/*:sha1-hash:*
 **Description:** When the launcher downloads a file with this endpoint, it comes encrypted, so it has to decrypt it with a XOR key (it is the same for every file and every game version).
@@ -52,6 +48,6 @@ with open("keystream.bin", "wb") as f:
 ### Option B: Looking for patterns
 
 **Description:** You could also look for patterns in a encrypted file sample. The key will be stored as plaintext if there are enough null bytes because of the following simple XOR rule.
-```
+:::tip
 0 ^ key = key
-```
+:::

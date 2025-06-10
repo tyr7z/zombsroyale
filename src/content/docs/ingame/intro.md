@@ -40,7 +40,9 @@ Below is an outgoing parsed sample of these packets:
 | version     | the protocol version |
 | proofOfWork | **\*PoW**            |
 
-The protocol version is also called Codec version and the proof of work is by far the hardest part to take away.
+:::note
+The protocol version is also called Codec version.
+:::
 
 #### \***PoW** (Proof of Work)
 
@@ -166,4 +168,7 @@ In this object:
 In our "SetPlatformRpc" sample, the first parameter is of type [String](https://zombsroyale.wiki/reference/rpc-parameter-types/#string-3) which in this case represents the string "Web" in 4 bytes `3, 87, 101, 98`, where the first byte is the string length and the rest are the "Web" characters in ASCII. The rest of the bytes of our outgoing RPC sample are of type [Uint8](https://zombsroyale.wiki/reference/rpc-parameter-types/#uint8-8) and are there just to confuse the reverse-engineer by randomizing the RPC structures on each lobby.
 
 If we ignore the dummy type `8` (Uint8) randomized parameters on this packet we are left with just the string "Web". So we now know the "SetPlatformRpc" sends a platform string that can be "Web", "Windows", "Android" or "iOS".
+
+:::tip
 The SetPlatformRpc is special because the server wont show the client ingame until it receives it, which makes it essential for bots to send it.
+:::

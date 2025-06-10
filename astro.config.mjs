@@ -19,8 +19,8 @@ export default defineConfig({
                     items: [{ label: "Zombs Royale", link: "/" }],
                 },
                 {
-                    label: "Platforms",
-                    autogenerate: { directory: "platforms" },
+                    label: "Official Clients",
+                    autogenerate: { directory: "clients" },
                 },
                 {
                     label: "Ingame",
