@@ -46,6 +46,10 @@ export default defineConfig({
                     label: "Resources",
                     autogenerate: { directory: "resources" },
                 },
+                {
+                    label: "Zombslib",
+                    autogenerate: { directory: "zombslib" },
+                },
             ],
         }),
     ],
