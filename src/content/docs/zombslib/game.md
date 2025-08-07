@@ -76,5 +76,5 @@ game.on("ReceiveChatMessageRpc", (rpc: ReceiveChatMessageRpc) => {
     `EntityUpdate` (entityUpdate: EntityUpdate)
 
 :::caution[Important]
-RPC reference is not yet available in our documentation, contact us if you've got any questions
+RPC reference is not yet available in our documentation, contact us if you've got any questions.
 :::
