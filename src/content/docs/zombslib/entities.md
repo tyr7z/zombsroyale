@@ -4,7 +4,7 @@ sidebar:
     order: 4
 ---
 
-Entities are split into categories. They're communicated to the client on `EnterWorldResponse`. Each category (entity map) has it's own attributes (Tick fields). You can take a look at the attributes in your `EnterWorldResponse` callback.
+Entities are split into categories. They're communicated to the client on `EnterWorldResponse`. Each category (entity map) has its own attributes (Tick fields). You can take a look at the attributes in your `EnterWorldResponse` callback.
 
 ```ts
 game.on("EnterWorldResponse", (response: EnterWorldResponse) => {
