@@ -4,12 +4,12 @@ sidebar:
     order: 0
 ---
 
-This is the official documentation for [zombslib](https://github.com/creaffy/zombslib). The library is currently **private**, we'll make it public at some point in the future.<br/>
+This is the official documentation for [zombslib](https://github.com/creaffy/zombslib). The library is currently **private**, we'll make it public at some point in the future.
 
 ## Credits
 
 Zombslib was inspired by [Zombs.io Client Library](https://github.com/particle99/zombs-client-library-ts). Make sure to check it out if you're interested.<br/>
-The rest of the credit goes to us, the group of reverse-engineers behind figuring out the protocol and making it all work - **xor&pray**.<br/>
+The rest of the credit goes to us, the group of reverse-engineers behind figuring out the protocol and making it all work - **xor&pray**.
 
 ## Purpose
 

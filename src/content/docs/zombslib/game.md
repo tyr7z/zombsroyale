@@ -60,19 +60,19 @@ game.on("ReceiveChatMessageRpc", (rpc: ReceiveChatMessageRpc) => {
 
 ## Supported events
 
--   **All RPCs** <br/>
+-   **All RPCs**\
     `ExampleRpc` (rpc: ExampleRpc)
--   **All Schemas** <br/>
+-   **All Schemas**\
     `SchemaExample` (data: SchemaExample or SchemaExample[])
--   **Any packet** <br/>
+-   **Any packet**\
     `RawData` (data: Uint8Array)
--   **Any RPC** <br/>
+-   **Any RPC**\
     `Rpc` (name: string, rpc: object)
--   **Any RPC (blob)** <br/>
+-   **Any RPC (blob)**\
     `RpcRawData` (namehash: number, decryptedData: Uint8Array)
--   **Enter World Response** <br/>
+-   **Enter World Response**\
     `EnterWorldResponse` (enterWorldResponse: EnterWorldResponse)
--   **TCP Entity Update** <br/>
+-   **TCP Entity Update**\
     `EntityUpdate` (entityUpdate: EntityUpdate)
 
 :::caution[Important]

@@ -39,13 +39,13 @@ game.on("EnterWorldResponse", (response: EnterWorldResponse) => {
 
 You can obtain the entity list or a specific entity using the following `Game` methods:
 
--   **getEntityList()**<br/>
+-   **getEntityList()**\
     returns the entire entity list
--   **getEntitiesByType(type)**<br/>
+-   **getEntitiesByType(type)**\
     returns all entities in the specified entity map
--   **getEntityByUid(uid)**<br/>
+-   **getEntityByUid(uid)**\
     returns an entity with the specified uid (unique identifier)
--   **getPlayerByName(name)**<br/>
+-   **getPlayerByName(name)**\
     returns the FIRST player in the list with the specified name
 
 :::note[Note]
