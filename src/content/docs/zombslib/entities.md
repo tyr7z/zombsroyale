@@ -1,5 +1,6 @@
 ---
 title: Entities
+description: Zombslib entity management guide
 sidebar:
     order: 4
 ---
@@ -23,7 +24,7 @@ game.on("EnterWorldResponse", (response: EnterWorldResponse) => {
 | PortalEntity         | `0x2293598d` |                        |
 | PlayerEntity         | `0x4254ae62` | Includes bots          |
 | CrystalEntity        | `0x58eafdbd` | Crystal Clash crystals |
-| VehicleEntity        | `0x5d0b456b` | ex. Hoverboard         |
+| VehicleEntity        | `0x5d0b456b` | e.g. Hoverboard        |
 | PhysicsEntity        | `0x8e187e23` | Likely unused          |
 | PlaneEntity          | `0x8fe5d35b` |                        |
 | ItemEntity           | `0xa7ecd754` |                        |
@@ -33,7 +34,7 @@ game.on("EnterWorldResponse", (response: EnterWorldResponse) => {
 | GasEntity            | `0xf15cdbb8` | The zone               |
 | NpcEntity            | `0xf4de4be0` | No longer in use       |
 | UnknownEntity        | `0xf5cf683e` | No idea                |
-| PlayerBuildingEntity | `0xf63a37d6` | ex. Snow Wall          |
+| PlayerBuildingEntity | `0xf63a37d6` | e.g. Snow Wall         |
 
 ## Entity list
 

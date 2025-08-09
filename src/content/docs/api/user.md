@@ -1,5 +1,8 @@
 ---
-title: User
+title: User API
+description: ZombsRoyale Wiki's ZombsRoyale.io REST API documentation
+sidebar:
+    label: "User"
 ---
 
 ## **GET** /api/user/_:userKey:_

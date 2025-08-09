@@ -23,10 +23,6 @@ export default defineConfig({
                     autogenerate: { directory: "clients" },
                 },
                 {
-                    label: "Ingame",
-                    autogenerate: { directory: "ingame" },
-                },
-                {
                     label: "Network",
                     autogenerate: { directory: "reference" },
                 },
@@ -35,8 +31,12 @@ export default defineConfig({
                     autogenerate: { directory: "api" },
                 },
                 {
-                    label: "Mason",
+                    label: "Mason Service",
                     autogenerate: { directory: "mason" },
+                },
+                {
+                    label: "Protocol",
+                    autogenerate: { directory: "protocol" },
                 },
                 {
                     label: "Exploits",

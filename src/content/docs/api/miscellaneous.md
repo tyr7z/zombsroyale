@@ -1,5 +1,8 @@
 ---
-title: Miscellaneous
+title: Miscellaneous API
+description: ZombsRoyale Wiki's ZombsRoyale.io REST API documentation
+sidebar:
+    label: "Miscellaneous"
 ---
 
 <!-- /api/quest/available?userKey={0} -->

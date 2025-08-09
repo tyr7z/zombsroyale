@@ -1,5 +1,8 @@
 ---
-title: Tournaments
+title: Tournaments API
+description: ZombsRoyale Wiki's ZombsRoyale.io REST API documentation
+sidebar:
+    label: "Tournaments"
 ---
 
 <!-- /api/tournament/{0}/whitelist/update?userKey={1} -->

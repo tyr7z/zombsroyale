@@ -1,5 +1,6 @@
 ---
 title: Codec
+description: Zombslib Codec guide
 sidebar:
     order: 3
     badge:

@@ -1,6 +1,8 @@
 ---
-title: Clans
+title: Clans API
+description: ZombsRoyale Wiki's ZombsRoyale.io REST API documentation
 sidebar:
+    label: "Clans"
     badge:
         text: Obsolete
         variant: danger

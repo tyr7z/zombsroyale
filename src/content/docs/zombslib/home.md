@@ -1,5 +1,6 @@
 ---
 title: Home
+description: The official Zombslib documentation
 sidebar:
     order: 0
 ---

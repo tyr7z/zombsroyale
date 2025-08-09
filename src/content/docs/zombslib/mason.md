@@ -1,5 +1,6 @@
 ---
 title: Mason Service
+description: Zombslib Mason Service guide
 sidebar:
     order: 1
 ---

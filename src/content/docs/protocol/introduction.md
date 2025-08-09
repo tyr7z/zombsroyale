@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: ZombsRoyale Wiki's introduction to ingame protocol reverse-engineering documentation.
+description: ZombsRoyale Wiki's ZombsRoyale.io protcol documentation
 ---
 
 When it comes to making bots or a private server for a given game, the first goal we have to keep in mind is to reverse-engineer and understand the protocol completely (or as much as possible). This is the major goal any game modder or hacker needs to achieve to be able to modify the game at will.
@@ -14,8 +14,9 @@ Since the game is multi-platform you can choose any platform you are most comfor
 I will not go into much detail here but I have chosen to inspect the packets through a web userscript with [Violentmonkey](https://violentmonkey.github.io/).
 
 Here are some other approaches you could try:
-- Find a PC client AntiCheat bypass and use hooks on helper methods to retrieve the decrypted packets.
-- Use [frida](https://frida.re/docs/javascript-api/) on an Android/iOS device or emulator.
+
+-   Find a PC client AntiCheat bypass and use hooks on helper methods to retrieve the decrypted packets.
+-   Use [frida](https://frida.re/docs/javascript-api/) on an Android/iOS device or emulator.
 
 There is no easy manner of doing this but some way may end up being easier for you.
 
@@ -23,19 +24,21 @@ There is no easy manner of doing this but some way may end up being easier for y
 
 The type of packets in charge of joining a lobby are [`PACKET_ENTER_WORLD`](https://zombsroyale.wiki/reference/packet-ids/#packet_enter_world-4).\
 Below is an outgoing parsed sample of these packets:
+
 ```json
 // Outgoing PACKET_ENTER_WORLD:
 {
-  "displayName": "Player",
-  "version": 18,
-  "proofOfWork": [
-    210, 121, 12, 65, 100, 84, 178, 85, 56, 241, 104, 185, 195, 241, 55, 43,
-    31, 183, 215, 223, 176, 4, 54, 220
-  ]
+    "displayName": "Player",
+    "version": 18,
+    "proofOfWork": [
+        210, 121, 12, 65, 100, 84, 178, 85, 56, 241, 104, 185, 195, 241, 55, 43,
+        31, 183, 215, 223, 176, 4, 54, 220
+    ]
 }
 ```
-|    NAME     |     DESCRIPTION      |
-|-------------|----------------------|
+
+| NAME        | DESCRIPTION          |
+| ----------- | -------------------- |
 | displayName | display name         |
 | version     | the protocol version |
 | proofOfWork | **\*PoW**            |
@@ -46,17 +49,19 @@ The protocol version is also called Codec version.
 
 #### \***PoW** (Proof of Work)
 
-- It is calculated differently for each platform and the algorithm changes across Codec versions.
-- It is what distinguishes the platform of the client to the server and therefore decides whether you need to send AntiCheat health packets or not.
+-   It is calculated differently for each platform and the algorithm changes across Codec versions.
+-   It is what distinguishes the platform of the client to the server and therefore decides whether you need to send AntiCheat health packets or not.
 
 ## RPCs and the EnterWorldResponse
 
 RPC stands for [Remote Procedure Call](https://en.wikipedia.org/wiki/Remote_procedure_call) but basically and for our purposes, RPCs are just a type of packets called [`PACKET_RPC`](https://zombsroyale.wiki/reference/packet-ids/#packet_rpc-9) with id `9` that handle the major part of intercommunication between clients and server on the game, being the ones encrypted and most important next to `PACKET_ENTER_WORLD`.
 Here is a decrypted sample of an RPC:
+
 ```js
 // Outgoing PACKET_RPC:
-Uint8Array(15) [ 9, 42, 0, 0, 0, 3, 87, 101, 98, 0, 0, 0, 0, 0, 0 ]
+Uint8Array(15)[(9, 42, 0, 0, 0, 3, 87, 101, 98, 0, 0, 0, 0, 0, 0)];
 ```
+
 This type of RPC is actually called "SetPlatformRpc" and this sample is from the web client (you'll see why that's important in a bit).
 There are also incoming RPCs, and both incoming and outgoing are encrypted, so we have to previously decrypt them from our homebrew toolset to actually inspect them and start reversing.\
 This is the first RPC decryption layer.
@@ -65,7 +70,7 @@ This is the first RPC decryption layer.
 
 There are also `PACKET_RPC` sub-types (such as "SetPlatformRpc") identified by the second value on the packets (`42, 0, 0, 0` on our sample) of type [Uint32](https://zombsroyale.wiki/reference/rpc-parameter-types/#uint32-0), which is the reason why it has a padding of zeros.
 
-These sub-types are actually called *indexes* and they correspond to RPC internal C# classes that inherit from either `OutRpc` or `InRpc` types of the game, depending on whether it is an outgoing or incoming RPC.
+These sub-types are actually called _indexes_ and they correspond to RPC internal C# classes that inherit from either `OutRpc` or `InRpc` types of the game, depending on whether it is an outgoing or incoming RPC.
 
 The game protocol is obfuscated in a way that both the client and server have so called `internalIds` that are matched to random indexes when a client joins a lobby.\
 I know this may seem confusing at first but **here is where the EnterWorldResponse comes into play.**
@@ -75,6 +80,7 @@ I know this may seem confusing at first but **here is where the EnterWorldRespon
 If you have been following along, you will remember the outgoing [`PACKET_ENTER_WORLD`](https://zombsroyale.wiki/reference/packet-ids/#packet_enter_world-4).
 The EnterWorldResponse is no more than the server-to-client packet in response to our outgoing `PACKET_ENTER_WORLD` (client-to-server) sample.
 Here is our parsed EnterWorldResponse sample:
+
 ```js
 // Incoming PACKET_ENTER_WORLD:
 {
@@ -124,19 +130,22 @@ Here is our parsed EnterWorldResponse sample:
   "udpPort": 9002
 }
 ```
+
 You can take a look at the whole dump [here](https://zombsroyale.wiki/enter-world-response-sample.json).
 
 Both the client and server have a copy of these `internalIds`. The server is choosing to use this set of them because it's identifying the platform of the client as "Web" with the Proof of Work. This is possible because the PoW is calculated differently for each platform and each platform has their own set of internalIds for each Codec version (18 in this case) that both client and server must share to intercommunicate.
 The PoWs are always different per connection because they rely on the ingame server's endpoint (randomized server-side each time).
 
 Here is our "SetPlatformRpc" sample again:
+
 ```js
 // Outgoing PACKET_RPC:
-Uint8Array(15) [ 9, 42, 0, 0, 0, 3, 87, 101, 98, 0, 0, 0, 0, 0, 0 ]
+Uint8Array(15)[(9, 42, 0, 0, 0, 3, 87, 101, 98, 0, 0, 0, 0, 0, 0)];
 ```
 
 To reverse it, the first thing we have to do is look for the RPC type index (`42` in this case, ignoring the padding) on the `rpcs` object of our EnterWorldResponse.\
 This is the part of the EnterWorldResponse's `rcps` object we are interested in:
+
 ```js
 "rpcs": [
   // ...
@@ -159,10 +168,11 @@ This is the part of the EnterWorldResponse's `rcps` object we are interested in:
 ```
 
 In this object of `rpcs`:
-- `index` is the randomized RPC sub-type id.
-- `internalId` is a hash-like internal identifier of the C# inheriting class of `InRpc` or `OutRpc` game types (in this case of "SetPlatformRpc").
-- `isArray` determines if the RPC can be sent multiple times on the same packet as an array.
-- `parameters` contains the parameter structure of the RPC.
+
+-   `index` is the randomized RPC sub-type id.
+-   `internalId` is a hash-like internal identifier of the C# inheriting class of `InRpc` or `OutRpc` game types (in this case of "SetPlatformRpc").
+-   `isArray` determines if the RPC can be sent multiple times on the same packet as an array.
+-   `parameters` contains the parameter structure of the RPC.
 
 :::note
 These indexes are randomized per connection so to identify the RPCs we have to rely on `internalId`

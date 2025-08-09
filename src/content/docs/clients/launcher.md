@@ -1,6 +1,6 @@
 ---
 title: Launcher
-description: ZombsRoyale Wiki's launcher reverse-engineering documentation.
+description: ZombsRoyale Wiki's ZombsRoyale.io official launcher documentation
 ---
 
 ## History
@@ -20,10 +20,12 @@ It is an OpenGL C++ program.
 
 ### The endpoints:
 
-##### **GET** /asset/manifest/*:id:*
+##### **GET** /asset/manifest/_:id:_
+
 **Description:** Returns a manifest JSON by its id number. The id can set to "current" for the endpoint to return the current latest manifest version JSON.
 
-##### **GET** /asset/content/*:sha1-hash:*
+##### **GET** /asset/content/_:sha1-hash:_
+
 **Description:** When the launcher downloads a file with this endpoint, it comes encrypted, so it has to decrypt it with a XOR key (it is the same for every file and every game version).
 
 ## Finding the launcher's XOR key
@@ -31,6 +33,7 @@ It is an OpenGL C++ program.
 ### Option A: Calculating it
 
 **Description:** You can calculate XOR keys when you have the encrypted and decrypted data (encrypted ^ decrypted = key). Here is a proof of concept written in Python.
+
 ```py
 encrypted = open("encrypted.bin", "rb").read()
 decrypted = open("decrypted.bin", "rb").read()

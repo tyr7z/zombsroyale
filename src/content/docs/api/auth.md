@@ -1,5 +1,8 @@
 ---
-title: Auth
+title: Authentication API
+description: ZombsRoyale Wiki's ZombsRoyale.io REST API documentation
+sidebar:
+    label: "Auth"
 ---
 
 ## **POST** /user/login/google

@@ -1,5 +1,6 @@
 ---
 title: Game API
+description: Zombslib Game API guide
 sidebar:
     order: 2
 ---

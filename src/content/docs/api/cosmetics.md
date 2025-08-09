@@ -1,5 +1,8 @@
 ---
-title: Cosmetics
+title: Cosmetics API
+description: ZombsRoyale Wiki's ZombsRoyale.io REST API documentation
+sidebar:
+    label: "Cosmetics"
 ---
 
 <!-- /api/reward/tracks/{0}/buy?userKey={0} -->
