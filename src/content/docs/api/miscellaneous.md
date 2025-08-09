@@ -1,5 +1,5 @@
 ---
-title: Miscellanous
+title: Miscellaneous
 ---
 
 <!-- /api/quest/available?userKey={0} -->
