@@ -36,4 +36,4 @@ An unsuccesssful one, like so:
 }
 ```
 
-Do not rely on HTTP codes, unsuccessfull calls often (but not always) return 200 OK.
+Do not rely on HTTP codes, unsuccessful calls often (but not always) return 200 OK.
