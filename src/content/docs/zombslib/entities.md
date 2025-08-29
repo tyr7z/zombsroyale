@@ -50,5 +50,5 @@ You can obtain the entity list or a specific entity using the following `Game` m
     returns the FIRST player in the list with the specified name
 
 :::note[Note]
-Game can only update entity list with **decodeEntityUpdates** set to true (default).
+Game can only update entity list with `decodeEntityUpdates` set to true (default).
 :::

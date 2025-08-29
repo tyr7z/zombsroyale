@@ -27,18 +27,14 @@ Here is a table with all `MasonService` options:
 To enter matchmaking, you must first create a party and configure it, once you're done, you can go ready.
 
 ```ts
-mason.on("open", () => {
-    setInterval(() => mason.sendPing(), 55 * 1000);
+mason.on("socketIoSessionData", (data: SocketIOSessionData) => {
+    setInterval(() => mason.sendPing(), data.pingInterval);
     mason.createParty();
     mason.setPartyRegion("vultr-frankfurt");
     mason.setPartyGameMode("Solo");
     mason.setReady(true);
 });
 ```
-
-:::note[Note]
-The official Mason Service server expects the client to ping it every 55 seconds but you'll be timed out after 2 minutes.
-:::
 
 ## Handling events
 
@@ -48,4 +44,4 @@ The official Mason Service server expects the client to ping it every 55 seconds
 mason.on("friendRequestReceived", (frq: ApiFriendRequest) => console.log(frq));
 ```
 
-List of all events and their parameters can be found in the source code, as well as [here](https://zombsroyale.wiki/mason/socket/). It is worth noting that there is an `any` event.
+List of all events and their parameters can be found in the source code, as well as [here](https://zombsroyale.wiki/mason/introduction/). It is worth noting that there is an `any` event.

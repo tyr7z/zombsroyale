@@ -8,8 +8,6 @@ sidebar:
         variant: caution
 ---
 
-## What is it?
-
 Under the hood, the `Game` class encodes and decodes network packets using `Codec` and its cryptographic component `ZRCrypto` for encryption, decryption and proof of work.
 
 ## How can it be used?

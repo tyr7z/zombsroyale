@@ -40,7 +40,7 @@ sidebar:
 
 <!-- /api/tournament/{0}/join?userKey={1} -->
 
-## **GET** /api/_:tournamentCode:_/join
+## **GET** /api/tournament/_:tournamentCode:_/join
 
 **Description:** Checks tournament status.\
 **Query Parameters:**

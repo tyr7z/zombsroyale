@@ -1,5 +1,5 @@
 ---
-title: Miscellaneous API
+title: Miscellaneous API Endpoints
 description: ZombsRoyale Wiki's ZombsRoyale.io REST API documentation
 sidebar:
     label: "Miscellaneous"

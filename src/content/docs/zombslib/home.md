@@ -14,7 +14,7 @@ The rest of the credit goes to us, the group of reverse-engineers behind figurin
 
 ## Purpose
 
-This project is intended to lay the foundation for all future ZR network-based projects. It is supposed to be a minimal library focused on delivering an easy-to-use **Codec Reimplementation** and **Artificial Player Controller API** with little to none extra features in order to stay clean and reliable.
+This project is intended to lay the foundation for all future ZR network-based projects. It is supposed to be a minimal library focused on delivering an easy-to-use **Codec Reimplementation** with a **Artificial Player Controller API** and a wrapper for the game's **REST & Mason API**. We want little to none extra features in order to stay clean and reliable.
 
 ## Contact
 
