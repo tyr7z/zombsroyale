@@ -5,7 +5,7 @@ sidebar:
     order: 0
 ---
 
-This is the official documentation for [zombslib](https://github.com/creaffy/zombslib). The library is currently **private**, we'll make it public at some point in the future.
+This is the official documentation for [zombslib](https://github.com/creaffy/zombslib).
 
 ## Credits
 
@@ -18,5 +18,4 @@ This project is intended to lay the foundation for all future ZR network-based p
 
 ## Contact
 
-**Discord:** @creaffy<br/>
-**Discord:** @tyr7z<br/>
+Join our [Discord server](https://discord.gg/E5QWPx6TrX) if you need any help!
