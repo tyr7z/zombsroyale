@@ -11,7 +11,7 @@ export default defineConfig({
                 // replacesTitle: true,
             },
             social: {
-                // github: "https://github.com/tyr7z/zombsroyale",
+                github: "https://github.com/tyr7z/zombsroyale",
             },
             sidebar: [
                 {
