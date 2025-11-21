@@ -79,7 +79,7 @@ sidebar:
 
 ### friendUpdated
 
-**Description:** Is sent once a friend is update.\
+**Description:** Is sent once a friend is updated.\
 **Parameters:**
 
 | NAME   | TYPE        |
