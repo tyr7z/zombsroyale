@@ -25,7 +25,7 @@ public enum e_PacketId
     PACKET_UDP_FRAGMENT,                  // 0x0C (12)
     PACKET_UDP_CONNECT_1300,              // 0x0D (13)
     PACKET_UDP_CONNECT_500,               // 0x0E (14)
-    PACKET_UDP_RPC = -1                   // 0xFFFFFFFF (-1)
+    PACKET_UDP_RPC = -1                   // 0xFF (-1)
 }
 ```
 

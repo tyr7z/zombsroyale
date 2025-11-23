@@ -14,7 +14,7 @@ ZombsRoyale's API is split into two components that each handle different things
 
 -   **Privileged key** - AKA "dev key", is a key to an account which was given additional privileges by the developers. Such accounts get access to a built-in ESP, dev commands, tournament perms and in-game player effects.
 
--   **Tournament code** - is the identifier of a tournament lobby. A table containing all (known) tournament codes can be found [here](https://gist.github.com/creaffy/26e74c6347b3c0dc1d494de9f9df0069).
+-   **Tournament code** - is the identifier of a tournament lobby. A table containing all (known) tournament codes can be found [here](https://zombsroyale.wiki/resources/tournament-codes/).
 
 ## Response structure
 
