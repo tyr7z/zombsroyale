@@ -10,9 +10,9 @@ export default defineConfig({
                 src: "./src/assets/logo.svg",
                 // replacesTitle: true,
             },
-            social: {
-                github: "https://github.com/tyr7z/zombsroyale",
-            },
+            social: [
+                { icon: "github", label: "GitHub", href: "https://github.com/tyr7z/zombsroyale" },
+            ],
             sidebar: [
                 {
                     label: "Main",
