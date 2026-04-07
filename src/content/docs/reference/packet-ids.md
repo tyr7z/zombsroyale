@@ -3,7 +3,7 @@ title: Packet IDs
 description: ZombsRoyale Wiki's Packet IDs reverse-engineering documentation
 ---
 
-The packet IDs are usually the first values ([`Uint8`](https://zombsroyale.wiki/reference/rpc-parameter-types/#uint8-8)) of the packets.
+The packet IDs are usually the first values ([`Uint8`](https://zombs.wiki/reference/rpc-parameter-types/#uint8-8)) of the packets.
 
 The `e_PacketId` enum represents different packet identifiers used in the Zombs Royale server protocol. Each packet ID corresponds to a specific type of communication or data exchange between the client and the server. Below is the documentation for each packet ID:
 

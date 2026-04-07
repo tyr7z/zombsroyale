@@ -78,9 +78,9 @@ Parties can have 4 members at most. They can be created with a random or a custo
 **Description:** Sets the tournament code of the party. Only the party leader can change this.\
 **Parameters:**
 
-| NAME | TYPE   | NOTES                                                                                                             |
-| ---- | ------ | ----------------------------------------------------------------------------------------------------------------- |
-| code | string | A list of all (known) tournament codes can be found [here](https://zombsroyale.wiki/resources/tournament-codes/). |
+| NAME | TYPE   | NOTES                                                                                                       |
+| ---- | ------ | ----------------------------------------------------------------------------------------------------------- |
+| code | string | A list of all (known) tournament codes can be found [here](https://zombs.wiki/resources/tournament-codes/). |
 
 ### restartPartyMatchmaking
 

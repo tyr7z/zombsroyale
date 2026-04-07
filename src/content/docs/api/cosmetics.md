@@ -94,5 +94,5 @@ sidebar:
 ---
 
 :::note[Note]
-Refer to [User API docs](https://zombsroyale.wiki/api/user/) to find information on making purchases.
+Refer to [User API docs](https://zombs.wiki/api/user/) to find information on making purchases.
 :::

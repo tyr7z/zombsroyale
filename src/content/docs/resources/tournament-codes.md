@@ -18,7 +18,7 @@ List of all (known) tournament codes.
 | ↓ Mode \ Region → | Europe        | US East        | US West        | Asia            |
 | ----------------- | ------------- | -------------- | -------------- | --------------- |
 | **Solo**          | `zfteusolos`  | `zftusesolos`  | `zftuswsolos`  | `zftasiasolos`  |
-| **Duo**           | `zfteusuos`   | `zftuseduos`   | `zftuswduos`   | `zftasiaduos`   |
+| **Duo**           | `zfteuduos`   | `zftuseduos`   | `zftuswduos`   | `zftasiaduos`   |
 | **Squad**         | `zfteusquads` | `zftusesquads` | `zftuswsquads` | `zftasiasquads` |
 
 ## Zombs Royale Events (ZRE)

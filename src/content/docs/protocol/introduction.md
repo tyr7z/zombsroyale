@@ -22,7 +22,7 @@ There is no easy manner of doing this but some way may end up being easier for y
 
 ## Joining a lobby
 
-The type of packets in charge of joining a lobby are [`PACKET_ENTER_WORLD`](https://zombsroyale.wiki/reference/packet-ids/#packet_enter_world-4).\
+The type of packets in charge of joining a lobby are [`PACKET_ENTER_WORLD`](https://zombs.wiki/reference/packet-ids/#packet_enter_world-4).\
 Below is an outgoing parsed sample of these packets:
 
 ```json
@@ -54,7 +54,7 @@ The protocol version is also called Codec version.
 
 ## RPCs and the EnterWorldResponse
 
-RPC stands for [Remote Procedure Call](https://en.wikipedia.org/wiki/Remote_procedure_call) but basically and for our purposes, RPCs are just a type of packets called [`PACKET_RPC`](https://zombsroyale.wiki/reference/packet-ids/#packet_rpc-9) with id `9` that handle the major part of intercommunication between clients and server on the game, being the ones encrypted and most important next to `PACKET_ENTER_WORLD`.
+RPC stands for [Remote Procedure Call](https://en.wikipedia.org/wiki/Remote_procedure_call) but basically and for our purposes, RPCs are just a type of packets called [`PACKET_RPC`](https://zombs.wiki/reference/packet-ids/#packet_rpc-9) with id `9` that handle the major part of intercommunication between clients and server on the game, being the ones encrypted and most important next to `PACKET_ENTER_WORLD`.
 Here is a decrypted sample of an RPC:
 
 ```js
@@ -68,7 +68,7 @@ This is the first RPC decryption layer.
 
 #### RPC types
 
-There are also `PACKET_RPC` sub-types (such as "SetPlatformRpc") identified by the second value on the packets (`42, 0, 0, 0` on our sample) of type [Uint32](https://zombsroyale.wiki/reference/rpc-parameter-types/#uint32-0), which is the reason why it has a padding of zeros.
+There are also `PACKET_RPC` sub-types (such as "SetPlatformRpc") identified by the second value on the packets (`42, 0, 0, 0` on our sample) of type [Uint32](https://zombs.wiki/reference/rpc-parameter-types/#uint32-0), which is the reason why it has a padding of zeros.
 
 These sub-types are actually called _indexes_ and they correspond to RPC internal C# classes that inherit from either `OutRpc` or `InRpc` types of the game, depending on whether it is an outgoing or incoming RPC.
 
@@ -77,7 +77,7 @@ I know this may seem confusing at first but **here is where the EnterWorldRespon
 
 ### The EnterWorldResponse and internalId's
 
-If you have been following along, you will remember the outgoing [`PACKET_ENTER_WORLD`](https://zombsroyale.wiki/reference/packet-ids/#packet_enter_world-4).
+If you have been following along, you will remember the outgoing [`PACKET_ENTER_WORLD`](https://zombs.wiki/reference/packet-ids/#packet_enter_world-4).
 The EnterWorldResponse is no more than the server-to-client packet in response to our outgoing `PACKET_ENTER_WORLD` (client-to-server) sample.
 Here is our parsed EnterWorldResponse sample:
 
@@ -131,7 +131,7 @@ Here is our parsed EnterWorldResponse sample:
 }
 ```
 
-You can take a look at the whole dump [here](https://zombsroyale.wiki/enter-world-response-sample.json).
+You can take a look at the whole dump [here](https://zombs.wiki/enter-world-response-sample.json).
 
 Both the client and server have a copy of these `internalIds`. The server is choosing to use this set of them because it's identifying the platform of the client as "Web" with the Proof of Work. This is possible because the PoW is calculated differently for each platform and each platform has their own set of internalIds for each Codec version (18 in this case) that both client and server must share to intercommunicate.
 The PoWs are always different per connection because they rely on the ingame server's endpoint (randomized server-side each time).
@@ -178,7 +178,7 @@ In this object of `rpcs`:
 These indexes are randomized per connection so to identify the RPCs we have to rely on `internalId`
 :::
 
-In our "SetPlatformRpc" sample, the first parameter is of type [String](https://zombsroyale.wiki/reference/rpc-parameter-types/#string-3) which in this case represents the string "Web" in 4 bytes `3, 87, 101, 98`, where the first byte is the string length and the rest are the "Web" characters in ASCII. The rest of the bytes of our outgoing RPC sample of type [Uint8](https://zombsroyale.wiki/reference/rpc-parameter-types/#uint8-8) are there just to confuse the reverse-engineer by randomizing the RPC structures on each connection.
+In our "SetPlatformRpc" sample, the first parameter is of type [String](https://zombs.wiki/reference/rpc-parameter-types/#string-3) which in this case represents the string "Web" in 4 bytes `3, 87, 101, 98`, where the first byte is the string length and the rest are the "Web" characters in ASCII. The rest of the bytes of our outgoing RPC sample of type [Uint8](https://zombs.wiki/reference/rpc-parameter-types/#uint8-8) are there just to confuse the reverse-engineer by randomizing the RPC structures on each connection.
 
 If we ignore the dummy type `8` (Uint8) randomized parameters on this packet we are left with just the string "Web". So we now know the "SetPlatformRpc" sends a platform string that can be "Web", "Windows", "Android" or "iOS".
 

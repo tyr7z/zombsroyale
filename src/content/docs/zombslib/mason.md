@@ -1,47 +1,53 @@
 ---
 title: Mason Service
-description: Zombslib Mason Service guide
+description: Official zombslib docs
 sidebar:
     order: 1
 ---
 
-## Getting started
+## Introduction
 
-If you are running a custom Mason Service server, you can specify the url to which you wish to connect, otherwise, you'll be connected to the official one.
+If you are unfamiliar with what Mason Service is, please refer to our [articles](https://zombs.wiki/mason/introduction/) regarding it.
+
+By default, Zombslib connects you to the official server but Zombslib also allows you to specify where exactly you wish to connect and if you want to use a proxy or not:
 
 ```ts
 const mason = new MasonService({
     url: "https://example.com/mason",
+    proxy: ...,
 });
 ```
 
-Here is a table with all `MasonService` options:
+## Matchmaking
 
-| NAME  | TYPE   | DESCRIPTION      |
-| ----- | ------ | ---------------- |
-| url   | string | Target URL       |
-| proxy | Agent  | Connection proxy |
-
-## Entering matchmaking
-
-To enter matchmaking, you must first create a party and configure it, once you're done, you can go ready.
+To enter matchmaking, you must first create a party and configure it, once you've done that, you can go ready.
 
 ```ts
 mason.on("socketIoSessionData", (data: SocketIOSessionData) => {
     setInterval(() => mason.sendPing(), data.pingInterval);
     mason.createParty();
-    mason.setPartyRegion("vultr-frankfurt");
+    mason.setPartyRegion(ServerRegion.Europe);
     mason.setPartyGameMode("Solo");
     mason.setReady(true);
 });
 ```
 
-## Handling events
-
-**Zombslib** automatically parses all incoming payloads for you and emits events.
+Once the matchmaking server finds a lobby for you, it will emit a `partyJoinServer` event, containing its details so that you can connect to it.
 
 ```ts
-mason.on("friendRequestReceived", (frq: ApiFriendRequest) => console.log(frq));
+mason.on("partyJoinServer", (server: ApiServer) => {
+    console.log(`${server.hostname}/${server.endpoint}`);
+});
 ```
 
-List of all events and their parameters can be found in the source code, as well as [here](https://zombsroyale.wiki/mason/introduction/). It is worth noting that there is an `any` event.
+Use the `Game` class to join the lobby with an in-game bot. More information on that [here](https://zombs.wiki/mason/game/).
+
+```ts
+mason.on("partyJoinServer", (server: ApiServer) => {
+    const game = new Game(server, { displayName: "Example Bot" });
+});
+```
+
+## Other events
+
+List of all events and their parameters can be found in the source code, as well as [here](https://zombs.wiki/mason/introduction/). It is worth noting that there is also an `any` event.
