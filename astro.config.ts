@@ -14,7 +14,11 @@ export default defineConfig({
                 src: "./src/assets/logo.svg",
             },
             social: [
-                { icon: "github", label: "GitHub", href: "https://github.com/tyr7z/zombsroyale" },
+                {
+                    icon: "github",
+                    label: "GitHub",
+                    href: "https://github.com/tyr7z/zombsroyale",
+                },
             ],
             sidebar: [
                 {
@@ -40,6 +44,10 @@ export default defineConfig({
                 {
                     label: "Protocol",
                     autogenerate: { directory: "protocol" },
+                },
+                {
+                    label: "Protection",
+                    autogenerate: { directory: "protection" },
                 },
                 {
                     label: "Exploits",
