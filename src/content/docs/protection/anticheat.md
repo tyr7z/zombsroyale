@@ -1,6 +1,6 @@
 ---
 title: Anticheat
-description: ZombsRoyale Wiki
+description: Documentation of ZombsRoyale.io's anticheat
 sidebar:
     label: Anticheat
     order: 1

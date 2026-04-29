@@ -1,6 +1,6 @@
 ---
 title: Obfuscation
-description: ZombsRoyale Wiki
+description: Documentation of obfuscation in ZombsRoyale.io
 sidebar:
     label: Obfuscation
     order: 2

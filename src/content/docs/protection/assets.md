@@ -1,6 +1,6 @@
 ---
 title: Assets Encryption
-description: ZombsRoyale Wiki
+description: Documentation of assets encryption in ZombsRoyale.io
 sidebar:
     label: Assets Encryption
     order: 3

@@ -1,6 +1,6 @@
 ---
 title: IL2CPP Fork
-description: ZombsRoyale Wiki
+description: Documentation of ZombsRoyale.io's IL2CPP fork
 sidebar:
     label: IL2CPP Fork
     order: 0
