@@ -85,13 +85,16 @@ Tournament codes given to content creators, with the exception of Luck, who used
 |           | Europe |   US East   | US West | Asia |
 | --------: | :----: | :---------: | :-----: | :--: |
 |  **Solo** |   ❌   | `lucksolo`  |   ❌    |  ❌  |
+|   **Duo** |   ❌   |  `luckduo`  |   ❌    |  ❌  |
 | **Squad** |   ❌   | `lucksquad` |   ❌    |  ❌  |
 
 ### Ssundee's lobby
 
-|          | Europe |  US East  | US West | Asia |
-| -------: | :----: | :-------: | :-----: | :--: |
-| **Solo** |   ❌   | `ssundee` |   ❌    |  ❌  |
+|           | Europe |    US East     | US West | Asia |
+| --------: | :----: | :------------: | :-----: | :--: |
+|  **Solo** |   ❌   |   `ssundee`    |   ❌    |  ❌  |
+|   **Duo** |   ❌   |  `ssundeeduo`  |   ❌    |  ❌  |
+| **Squad** |   ❌   | `ssundeesquad` |   ❌    |  ❌  |
 
 ## Special
 
