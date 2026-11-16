@@ -13,11 +13,11 @@ Tournament codes given to event organizers.
 
 ### Zombs Clan Central (ZCC)
 
-|           |    Europe    |  US East   | US West |      Asia      |
-| --------: | :----------: | :--------: | :-----: | :------------: |
-|  **Solo** | `zcceusolo`  | `zccsolo`  |   ❌    | `zccasiasolo`  |
-|   **Duo** |  `zcceuduo`  |  `zccduo`  |   ❌    |  `zccasiaduo`  |
-| **Squad** | `zcceusquad` | `zccsquad` |   ❌    | `zccasiasquad` |
+|           |    Europe    |  US East   |    US West    |      Asia      |
+| --------: | :----------: | :--------: | :-----------: | :------------: |
+|  **Solo** | `zcceusolo`  | `zccsolo`  | `zccuswsolo`  | `zccasiasolo`  |
+|   **Duo** |  `zcceuduo`  |  `zccduo`  |  `zccuswduo`  |  `zccasiaduo`  |
+| **Squad** | `zcceusquad` | `zccsquad` | `zccuswsquad` | `zccasiasquad` |
 
 ### Zombs Fight-Fi Tournaments (ZFT)
 
