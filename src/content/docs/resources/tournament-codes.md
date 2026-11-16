@@ -88,7 +88,7 @@ Tournament codes given to content creators, with the exception of Luck, who used
 |   **Duo** |   ❌   |  `luckduo`  |   ❌    |  ❌  |
 | **Squad** |   ❌   | `lucksquad` |   ❌    |  ❌  |
 
-### Ssundee's lobby
+### Ssundee's lobbies
 
 |           | Europe |    US East     | US West | Asia |
 | --------: | :----: | :------------: | :-----: | :--: |
